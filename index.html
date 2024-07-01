@@ -31,10 +31,10 @@
     font-style: normal;
     }
     body{
-        width: 100%;
-        height: 100vh;
+        width: 100vw !important;
+        height: 100vh !important;
         position: relative;
-        overflow: hidden;
+        overflow: hidden !important;
     }
     .container{
         text-align: center;
@@ -43,6 +43,14 @@
         left: 50%;
         transform: translate(-50%,-50%);
         z-index: 10;
+    }
+    h1{
+        font-size: 40px;
+        color: #bd6512;
+    }
+    p{
+        font-size: 20px;
+        opacity: .5;
     }
     svg{
         position: fixed;
@@ -54,26 +62,115 @@
     .svg{
         opacity: .2;
     }
+
+    header{
+        padding:16px 20px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 96%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+   
+    }
     img{
-        width: 100%;
-        height: 300px;
-        margin: 10px;
+        width: 100px;
+        height: 80px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav a{
+        color: #bd6512;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+    .nav-phone{
+        display: none;
     }
 
-    
+    @media screen and (max-width:1000px){
+       
+        .container{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        }
+        h1{
+            font-size: 40px;
+            color: #bd6512;
+        }
+        p{
+            font-size: 20px;
+            opacity: .5;
+        }
+        svg{
+            height: 350px;
+            
+        }
+        .svg{
+            opacity: .2;
+        }
+        .nav{
+            display: none;
+        }
+        .nav-phone{
+            display: block;
+            margin: 10px 0;
+        }
+        .nav-phone a{
+            /* background-color: #bd6512;
+            color: #ffffff; */
+            border: 1px solid #bd6512;
+            color: #bd6512;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s ease-in-out;
+        }
+        .nav-phone a:hover{
+                background-color: #bd6512;
+            color: #ffffff;
+        }
+        header{
+            flex-direction: column;
+        }
+    }
     </style>
 
 </head>
 <body>
 
-    <div class="container">
-        <nav>
+    <header dir="rtl">
+        <img src="logo.png" alt="">
+        <nav class="nav">
             <a href=""><i class="fa-brands fa-whatsapp"></i></a>
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-x-twitter"></i></a>
         </nav>
-        <img src="logo.png" alt="">
-        <h1 class="almarai-regular">قريبا ...</h1>
+      
+    </header>
+    <div class="container">
+      
+        <h1 dir="rtl" class="almarai-bold">قريبا ...</h1>
+        <!-- <h1 dir="rtl" class="almarai-bold">SOON</h1> -->
+        <p class="almarai-regular">
+           صحيفة دليلك احد مشاريع شركة فوريو 
+        </p>
+        <nav class="nav-phone">
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        </nav>
 
     </div>
 
